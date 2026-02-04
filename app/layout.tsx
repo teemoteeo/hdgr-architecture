@@ -1,20 +1,10 @@
 import type { Metadata } from "next";
-import { JetBrains_Mono, Inter } from "next/font/google";
+import { ScrollHeader } from "@/components/ScrollHeader";
 import "./globals.css";
 
-const jetbrainsMono = JetBrains_Mono({
-  subsets: ["latin"],
-  variable: "--font-jetbrains-mono",
-});
-
-const inter = Inter({
-  subsets: ["latin"],
-  variable: "--font-inter",
-});
-
 export const metadata: Metadata = {
-  title: "HDGR Design & Development",
-  description: "Architecture portfolio - Julian Hendigery",
+  title: "HDGR — Architecture & Development",
+  description: "Architecture portfolio — Julian Hendigery",
 };
 
 export default function RootLayout({
@@ -24,7 +14,8 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={`${jetbrainsMono.variable} ${inter.variable} font-sans antialiased`}>
+      <body className="font-mono">
+        <ScrollHeader />
         {children}
       </body>
     </html>

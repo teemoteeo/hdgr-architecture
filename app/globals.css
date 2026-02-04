@@ -3,7 +3,54 @@
 @tailwind utilities;
 
 @layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
   body {
-    @apply bg-warmWhite text-anthracite;
+    @apply bg-background text-primary antialiased;
+    font-size: 11px;
+    font-weight: 400;
+    background-image:
+      /* Thicker lines every 4th grid (80px) - horizontal */
+      linear-gradient(rgba(0,0,0,0.06) 1.5px, transparent 1.5px),
+      /* Thicker lines every 4th grid (80px) - vertical */
+      linear-gradient(90deg, rgba(0,0,0,0.06) 1.5px, transparent 1.5px),
+      /* Regular grid lines (20px) - horizontal */
+      linear-gradient(rgba(0,0,0,0.03) 1px, transparent 1px),
+      /* Regular grid lines (20px) - vertical */
+      linear-gradient(90deg, rgba(0,0,0,0.03) 1px, transparent 1px);
+    background-size: 80px 80px, 80px 80px, 20px 20px, 20px 20px;
+  }
+
+  /* Reduced motion support */
+  @media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+    }
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+
+  .architecture-grid {
+    background-image:
+      /* Thicker lines every 4th grid (80px) - horizontal */
+      linear-gradient(rgba(0,0,0,0.06) 1.5px, transparent 1.5px),
+      /* Thicker lines every 4th grid (80px) - vertical */
+      linear-gradient(90deg, rgba(0,0,0,0.06) 1.5px, transparent 1.5px),
+      /* Regular grid lines (20px) - horizontal */
+      linear-gradient(rgba(0,0,0,0.03) 1px, transparent 1px),
+      /* Regular grid lines (20px) - vertical */
+      linear-gradient(90deg, rgba(0,0,0,0.03) 1px, transparent 1px);
+    background-size: 80px 80px, 80px 80px, 20px 20px, 20px 20px;
+    background-position: 0 0, 0 0, 0 0, 0 0;
   }
 }

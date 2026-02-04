@@ -1,0 +1,12 @@
+Placeholder images - replace with actual project images from PDF:
+
+Hero images needed:
+- nepal-school-hero.jpg
+- casa-brodna-hero.jpg  
+- reuse-abbey-hero.jpg
+- fasanenplatz-hero.jpg
+- reuse-temple-hero.jpg
+
+Extract from PDF pages using image editing software or convert PDF to images.
+Recommended resolution: 1920x1080 minimum
+Format: JPG, optimized for web
